@@ -21,7 +21,7 @@ def get_message(message):
         client.send_message(message.from_user.id, "Ожидайте, идет обработка...")
 
         textHandler.speech_creator(message.text)
-        audio_file = open(r"VoiceDocuments\file.mp3", "rb")
+        audio_file = open(r"file.mp3", "rb")
 
         client.send_document(message.from_user.id, document=audio_file)
 
